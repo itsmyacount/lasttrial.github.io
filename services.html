@@ -1,0 +1,682 @@
+<!doctype html>
+<html>
+<head>
+	<title>Perfect Smile:Dental Clinic</title>
+
+	<!--characterset-->
+	<meta charset="utf-8">
+	<!--For making the website responsive-->
+	<meta name="viewport" width="device-width", initial-scale="1.0">
+
+	<meta name="description" content="This is a project work of CIS-145 webpublishing course in University of Fraser Valley taught by Prof. Lili Saghafi done by team "Webmasters". This website represents a dental clinic named 
+	Perfect Smile.">
+
+	<meta name="keywords" content="CIS-145, WEB PUBLISHING, University of Fraser Valley, Prof. Lili Saghafi, Term Project, Webmasters, HTML5, CSS3, Dental clinic, Perfect Smile">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+	<meta name="author" content=" Team Webmasters, Pratham(Team Leader), Pushpanjali, Rohan Syal, Yajat Chawla">
+	<meta name="generator" content="Notepad">
+
+<style>
+
+*{box-sizing:border-box;
+Margin:0;
+padding:0;}
+
+
+body{font-family:sans-serif, georgia;
+	background-color:#defcfc;}
+
+.title {display:block;
+	position:fixed;
+	top:0;
+	z-index:1;
+	height:150px;
+	width:100%;
+	background-color:white;
+	padding-left:10%;}
+
+.title h1 {font-size:60px;
+	padding:0;
+	margin:0;
+	z-index:1;
+	margin-left:16%;
+	padding-top:4%;
+	font-family:"Comic Sans MS", sans-serif;
+	color:#00bcd4;
+	letter-spacing:3px;
+	background-color:white;
+	}
+
+.logo {position:fixed;
+	top:0;
+	right:0;
+	z-index:1;
+	margin-left:0;
+	padding-left:0;
+	margin-top:0px;
+	float:right;
+	overflow:hidden;}
+
+
+hr {width: 50%;
+    color: #7f7f7f;
+    background-color: #7f7f7f;
+    height: 3px;
+    margin: 60px 0 60px 0;
+}
+
+
+
+
+
+
+.menu-wrap {
+position:fixed;
+top:0px;
+left:0;
+z-index:1;
+margin-right:0;
+padding-right:0;}
+
+.menu-wrap .toggler {
+position:absolute;
+top:0px;
+left:0;
+z-index:2;
+cursor:pointer;
+width:100px;
+height:100px;
+opacity:0;}
+
+.menu-wrap .Hamburger{
+position:absolute;
+top:0px;
+left:0;
+z-index:1;
+width:150px;
+height:150px;
+padding:2rem;
+background-color:grey;
+display:flex;
+align-items:center;
+justify-content:center;}
+
+
+/*  hamburger line*/
+.menu-wrap .Hamburger > div {
+position:relative;
+width:100%;
+height:4px;
+background-color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* top and bottom hamburger line*/
+.menu-wrap .Hamburger > div:before,
+.menu-wrap .Hamburger > div:after
+{content:'';
+position:absolute;
+z-index:1;
+top:-20px;
+width:100%;
+height:4px;
+background: inherit;
+}
+
+/* top hamburger line*/
+.menu-wrap .Hamburger > div:after {
+top:20px;
+}
+
+.menu-wrap .toggler:checked + .Hamburger > div {
+background-color:#fff;}
+
+.menu-wrap .toggler:checked ~ .menu{visibility:visible;}
+
+.menu-wrap .toggler:checked ~ .menu > div {transform:scale(1);}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {opacity:1;}
+
+
+
+
+.menu-wrap .menu{
+position:fixed;
+top:0px;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+visibility:hidden;}
+
+
+
+.menu-wrap .menu > div {
+background-color:#f9f6f7;
+border-radius:50%;
+width:300vw;
+height:300vw;
+display:flex;
+flex:none;
+align-items:center;
+justify-content:center;
+transform:scale(0);
+}
+
+
+.menu-wrap .menu > div > div {
+text-align:center;
+max-width:90vw;
+max-height:100vh;
+opacity:0;}
+
+
+
+.menu ul li {
+list-style:none;
+color:grey;
+font-size:3rem;
+padding:1rem;}
+
+
+
+ a {
+
+text-decoration:none;
+}
+
+.services {position:relative;
+	top:150px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:100vh;
+	background-image:url("services.jpeg");
+	background-position: center;
+ 	background-repeat: no-repeat;
+  	background-size: cover;
+ 	position: relative;
+	z-index:-2;
+	opacity:0.5;}
+
+.servicesh3 {border:5px solid black;
+	position:relative;
+	padding:40px;
+	border-radius:30px;
+	z-index:10;
+	opacity:1;
+	font-size:50px;
+	color:black;
+	top:-50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:white;}
+
+
+.introduction {position:relative;
+		top:200px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		font-size:40px;
+		line-height:1.5;
+		padding:0 7% 0 7%;
+		color:grey;}
+
+
+.hr1 {position:relative;
+	top:200px;}
+
+
+@media only screen and (max-width:1000px) {
+.container-1, .container-2, .container3, .container-4, .container-5, .container-6{ display:flex;
+ flex-direction:row;
+
+}}
+@media only screen and (min-width:800px) {
+.container-1, .container-2, .container3, .container-4, .container-5, .container-6{ display:flex;
+ flex-direction:row;
+
+}}
+
+
+
+.container-1, .container-2, .container3, .container-4, .container-5, .container-6 {display:flex;
+											flex-direction:column;}
+
+
+.box-1 {position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;}
+
+
+.box-2 p, h2{position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+
+.box-2 h2 {padding:20px 0 20px 0;
+		}
+
+.box-3 {position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;}
+
+.box-4 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-4 h2 {padding:20px 0 20px 0;
+		}
+
+
+.box-5, .box-7, .box-9, .box-11{position:relative;
+	top:200px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;}
+
+.box-6 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-6 h2 {padding:20px 0 20px 0;
+		}
+
+.box-8 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-8 h2 {padding:20px 0 20px 0;
+		}
+.box-10 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-10 h2 {padding:20px 0 20px 0;
+		}
+.box-12 p, h2 {position:relative;
+	color:grey;
+	font-size:40px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin:0 7% 0 7%;
+	top:200px;
+	background-color:white;}
+.box-12 h2 {padding:20px 0 20px 0;
+		}
+
+footer {background-color:#aaaaaa;
+	position:relative;
+	top:400px;
+	height:1600px;}
+
+.address {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		
+		
+		line-height:2;
+		font-size:40px;
+		}
+
+.contact {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		top:50px;
+		padding:20px;
+		
+		line-height:2;
+		font-size:40px;}
+.Disclamier {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;
+		}
+.Developer {position:relative;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		padding:40px;
+		line-height:2;
+		font-size:40px;}
+
+.bookanappointmentbutton {
+	position:relative;
+	top:20px;
+	border-radius:30px;
+  	color: white;
+	background-color:grey;
+ 	padding: 16px 32px;
+	display:flex;
+  	text-align: center;
+  	text-decoration: none;
+	text-transform:uppercase;
+  	font-size: 40px;
+  	margin: 4px 2px;
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+}
+
+.bookanappointmentbutton:hover {background-color:#bbbbbb;}
+
+</style>
+
+</head>
+
+
+<body>
+
+</div>
+
+	<div class="title"><h1>PERFECT SMILE</h1></div>
+
+	<div class="menu-wrap">
+
+	<input type="checkbox" class="toggler">
+		<div class="Hamburger">
+			<div>
+			</div>
+		</div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<a href="Bookanappointment.html"><li>BOOK AN APPOINTMENT</li></a>
+						<a href="#"><li>VIRTUAL CONSULTATION</li></a>
+						<a href="#"><li>PATIENT REVIEWS</li></a>
+						<a href="#"><li>OUR SERVICES</li></a>
+						<a href="#"><li>FIND US</li></a>
+						<a href="#"><li>CONTACT US</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+	<div class="logo">
+		<figure>
+		<a href="index.html"><img src="logo.png" alt="SERVICES" width="200px" height="150px"></a>
+		</figure>
+	</div>
+	
+</div>
+
+<div class="services">
+
+<div class="servicesh3"><h3>SERVICES</h3><br></div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+<div class="introduction">
+	
+	<center><p>Great dental health is the result of early detection and preventive treatments. But it’s never too late to develop a connection with your dental team and get the care you need!<br>
+
+	<button class="bookanappointmentbutton" type="button"><a style="color:white; text-decoration:none;" href="Bookanappointment.html">Book an appointment</a></button>
+
+	</center>	
+	
+</p>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+
+<div  class="container-1">
+	
+	<div class="box-1">
+	
+	<img src="invisalign.jpeg" alt="invisalign" width="100%" height="400px">
+	</div>
+	
+	<div class="box-2">
+	<h2 style="text-decoration:underline; font-size:50px;">INVISALIGN</h2>
+	<p style="padding:20px; line-height:1.5;">Lots of people have crooked teeth — about 300 million! Thankfully, there’s an easy solution. At Perfect smile Dental,
+	 we offer Invisalign as our preferred tooth-straightening system for people of all ages. Invisalign is a great option for those wanting to avoid the hassle, discomfort, and time commitment of traditional metal braces. This highly effective treatment uses a series of clear, custom-made aligners and offers beautiful results. 
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+
+<div  class="container-2">
+	
+	<div class="box-3">
+	
+	<img src="veneers.jpg" alt="veneers" width="100%" height="400px">
+	</div>
+	
+	<div class="box-4">
+	<h2 style="text-decoration:underline; font-size:50px;">VENEERS</h2>
+	<p style="padding:20px; line-height:1.5;">If you have cosmetic concerns about your teeth, porcelain veneers are one of the quickest, most dramatic ways to improve your smile. We like to refer to veneers as “instant orthodontics” — the faster, simpler 
+	way to align and perfect your teeth without the need for braces. Veneers are thin, durable, and custom-made porcelain shells for your teeth. 
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+
+<div  class="container-3">
+	
+	<div class="box-5">
+	
+	<img src="bridges.jpg" alt="bridges" width="100%" height="400px">
+	</div>
+	
+	<div class="box-6">
+	<h2 style="text-decoration:underline; font-size:50px;">BRIDGES</h2>
+	<p style="padding:20px; line-height:1.5;">If you have cosmetic concerns about your teeth, porcelain veneers are one of the quickest, most dramatic ways to improve your smile. We like to refer to veneers as “instant orthodontics” — the faster, simpler 
+	way to align and perfect your teeth without the need for braces. Veneers are thin, durable, and custom-made porcelain shells for your teeth. 
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+<div  class="container-4">
+	
+	<div class="box-7">
+	
+	<img src="crown.jpg" alt="crown" width="100%" height="400px">
+	</div>
+	
+	<div class="box-8">
+	<h2 style="text-decoration:underline; font-size:50px;">CROWN</h2>
+	<p style="padding:20px; line-height:1.5;">
+        Our porcelain crowns are custom designed to fit your mouth. We specialize in tooth-colored crowns that look just like your natural teeth. Plus, thanks to our advanced technology, we offer same day crown options to fit your busy life.
+
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+
+<div  class="container-5">
+	
+	<div class="box-9">
+	
+	<img src="dentures.jpeg" alt="dentures" width="100%" height="400px">
+	</div>
+	
+	<div class="box-10">
+	<h2 style="text-decoration:underline; font-size:50px;">DENTURES</h2>
+	<p style="padding:20px; line-height:1.5;">
+       If you’re missing multiple teeth due to decay, injury, or the natural aging process, dentures might be the perfect solution. Modern dentures are made from high-tech, durable materials and are much easier to maintain than you might think. When properly designed and fitted, your dentures will act just like natural teeth, restoring your ability to smile, speak, and chew with confidence.
+
+
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+
+<div  class="container-6">
+	
+	<div class="box-11">
+	
+	<img src="implants.jpg" alt="implants" width="100%" height="400px">
+	</div>
+	
+	<div class="box-12">
+	<h2 style="text-decoration:underline; font-size:50px;">IMPLANTS</h2>
+	<p style="padding:20px; line-height:1.5;">
+      When you’re dealing with missing, broken, or severely damaged teeth, your confidence can suffer. More importantly, these issues take a toll on your health. You deserve better. Talk to us about dental implant restorations. At Perfect smile Dental, our implant restorations are permanent and made from the highest-quality biocompatible materials.
+
+	</p>
+
+	</div>
+
+</div>
+
+<div class="hr1"><center><hr noshade></center></div>
+
+
+<footer>
+
+		<map name="socialmedia">
+  		<area shape="rect" coords="10,20,60,80" alt="instagram" href="#">
+ 		<area shape="rect" coords="80,20,125,80" alt="facebook" href="#">
+  		<area shape="rect" coords="155,20,190,80" alt="twitter" href="#">
+		</map>
+
+		
+		<center><img class="socialmedia" src="socialmedia.png" alt="Instagram-Facebook-twitter" usemap="#socialmedia" width="200px" height="100px"></center>
+		
+		<center>
+			<div class="address"><p>Address:</br>
+				56 Nehru road</br>
+				Sector 19, 
+				Chandigarh</p>
+			</div>
+		</center>
+
+
+
+		<center>
+			<div class="contact">
+				<p>Contact: <br>E-mail:<a style="text-decoration:none;color:black;" href="mailto:mailto:webmastersUFV@gmail.com">webmastersUFV@gmail.com</a></br>
+				Call us:XXXXX XXXXX</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Disclamier">
+				<p>Disclamier:<br>
+				“This is a project of CIS 145 , Web Publishing Course in UFV, Instructed and requested by Professor Lili Saghafi"</p>
+			</div>
+		</center>
+
+		<center>
+			<div class="Developer">
+				<p>Designed and Developed by:<br>
+				Team WEBMASTERS</p>
+			</div>
+		</center>
+		
+		<center>
+			<div>
+				<img src="Accessibilitylogo.png">
+			</div>
+		</center>
+</footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
